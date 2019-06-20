@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { map } from "rxjs/operators";
+import { map, catchError } from "rxjs/operators";
+import { empty } from "rxjs";
 
 @Injectable({
   providedIn: "root"
@@ -19,6 +20,9 @@ export class GiphyService {
         } else {
           return "https://media.giphy.com/media/YaOxRsmrv9IeA/giphy.gif";
         }
+      }),
+      catchError((err, caught) => {
+        return empty();
       })
     );
   }
