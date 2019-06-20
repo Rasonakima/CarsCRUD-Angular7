@@ -21,15 +21,15 @@ export class CarService {
 
   save(car: any): Observable<any> {
     let result: Observable<any>;
-    if (car["href"]) {
-      result = this.http.put(car.href, car);
+    if (car["id"]) {
+      result = this.http.put(this.CAR_API + "/" + car.id, car);
     } else {
       result = this.http.post(this.CAR_API, car);
     }
     return result;
   }
 
-  remove(href: string) {
-    return this.http.delete(href);
+  remove(id) {
+    return this.http.delete(this.CAR_API + "/" + id);
   }
 }

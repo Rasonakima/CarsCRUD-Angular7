@@ -29,7 +29,7 @@ export class CarEditComponent implements OnInit, OnDestroy {
         this.carService.get(id).subscribe((car: any) => {
           if (car) {
             this.car = car;
-            this.car.href = car._links.self.href;
+            this.car.id = id;
             this.giphyService
               .get(car.name)
               .subscribe(url => (car.giphyUrl = url));
@@ -59,8 +59,8 @@ export class CarEditComponent implements OnInit, OnDestroy {
     );
   }
 
-  remove(href) {
-    this.carService.remove(href).subscribe(
+  remove(id) {
+    this.carService.remove(id).subscribe(
       result => {
         this.gotoList();
       },
