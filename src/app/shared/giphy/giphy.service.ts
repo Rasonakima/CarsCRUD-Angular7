@@ -7,7 +7,7 @@ import { empty } from "rxjs";
   providedIn: "root"
 })
 export class GiphyService {
-  giphyApi = "//api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&limit=1&q=";
+  giphyApi = "//api.giphy.com/v1/gifs/search?api_key=oUThALwXNzrOG4b1jRyoPDtmZJmmW5HU&limit=1&q=";
 
   constructor(public http: HttpClient) {}
 
