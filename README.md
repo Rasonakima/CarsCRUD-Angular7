@@ -1,6 +1,6 @@
 # Live Demo
 
-This project is deployed on firebase. [Try me](https://cars-rest-crud.firebaseapp.com/car-list)
+This project is deployed on firebase. [Try me](https://cars-rest-crud.firebaseapp.com)
 
 # CarsCrud
 
