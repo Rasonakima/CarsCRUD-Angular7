@@ -1,3 +1,7 @@
+# Live Demo
+
+This project is deployed on firebase. [Try me](https://cars-rest-crud.firebaseapp.com/car-list)
+
 # CarsCrud
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
